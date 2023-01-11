@@ -1,10 +1,11 @@
 import { Button } from "ui";
+import { Welcome } from "../src/components/Welcome";
 
 export default function Docs() {
   return (
     <div>
-      <h1>Docs</h1>
-      <Button />
+      <Welcome />
+      <Button variant="seconday" />
     </div>
   );
 }

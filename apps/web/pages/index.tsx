@@ -1,9 +1,10 @@
 import { Button } from "ui";
+import { Welcome } from "../src/components/Welcome";
 
 export default function Web() {
   return (
     <div>
-      <h1>Web</h1>
+      <Welcome />
       <Button />
     </div>
   );
