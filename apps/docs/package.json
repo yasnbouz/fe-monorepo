@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 8008",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build --quiet",
+    "storybook:serve": "pnpx live-server storybook-static --cors --port=6006"
   },
   "dependencies": {
     "next": "^13.1.1",

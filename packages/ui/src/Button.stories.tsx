@@ -3,7 +3,7 @@ import { Button } from "./Button";
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   component: Button,
-  title: "Components/Button",
+  title: "Design System/Button",
 };
 
 export const Primary = {};

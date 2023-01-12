@@ -1,7 +1,7 @@
 import { Welcome } from "./Welcome";
 
 export default {
-  title: "Web/Components/Welcome",
+  title: "Docs/Components/Welcome",
   component: Welcome,
 };
 export const Default = {};

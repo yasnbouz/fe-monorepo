@@ -10,7 +10,10 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "storybook": "turbo run storybook --parallel",
+    "storybook:build": "turbo run storybook:build --parallel",
+    "storybook:serve": "turbo run storybook:serve --parallel"
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",

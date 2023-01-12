@@ -5,8 +5,9 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 6008",
+    "storybook:build": "storybook build --quiet",
+    "storybook:serve": "pnpx live-server storybook-static --port=6008"
   },
   "dependencies": {
     "react": "^18.2.0",

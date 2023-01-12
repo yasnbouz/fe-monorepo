@@ -18,6 +18,14 @@
     },
     "storybook": {
       "cache": false
+    },
+    "storybook:build": {
+      "outputs": [
+        "storybook-static/**"
+      ]
+    },
+    "storybook:serve": {
+      "cache": false
     }
   }
 }
