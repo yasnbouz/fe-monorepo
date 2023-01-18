@@ -14,10 +14,12 @@
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "storybook": {
-      "cache": false
+      "cache": false,
+      "persistent": true
     },
     "storybook:build": {
       "outputs": [

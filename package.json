@@ -1,5 +1,5 @@
 {
-  "name": "large-monorepo",
+  "name": "design-monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "1.6.3"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -26,5 +26,5 @@
   "prettier": {
     "printWidth": 80
   },
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "pnpm@7.18.2"
 }
