@@ -12,6 +12,7 @@
     "storybook:serve": "pnpx live-server storybook-static --port=6007"
   },
   "dependencies": {
+    "icons": "workspace:*",
     "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -1,9 +1,8 @@
 import { type VariantProps, cva } from "cva";
 import { clsx } from "clsx";
 import type { HTMLAttributes } from "react";
-
 const button = cva(
-  "rounded-3xl select-none inline-flex items-center justify-center gap-x-2",
+  "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",
   {
     variants: {
       size: {
