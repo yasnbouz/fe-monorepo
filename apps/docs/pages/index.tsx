@@ -5,7 +5,7 @@ export default function Docs() {
   return (
     <div>
       <Welcome />
-      <Button variant="seconday" />
+      <Button variant="secondary" />
     </div>
   );
 }

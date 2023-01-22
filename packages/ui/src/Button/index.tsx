@@ -2,6 +2,7 @@ import { type VariantProps, cva } from "cva";
 import { clsx } from "clsx";
 import type { HTMLAttributes, SVGProps } from "react";
 import { Loading } from "icons";
+
 const button = cva(
   "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",
   {

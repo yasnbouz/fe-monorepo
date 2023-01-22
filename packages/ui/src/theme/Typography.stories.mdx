@@ -1,0 +1,48 @@
+import { Meta, Typeset } from "@storybook/addon-docs";
+
+<Meta title="Design Tokens/Typography" />
+
+export const typography = {
+  type: {
+    sans: "Inter, sans-serif",
+  },
+  weight: {
+    regular: "400",
+    semiBold: "600",
+  },
+  size: {
+    xs: "0.75rem",
+    sm: "0.875rem",
+    base: "1rem",
+    lg: "1.125rem",
+    xl: "1.25rem",
+    "2xl": "1.75rem",
+    "3xl": "2.25rem",
+    "4xl": "4rem",
+  },
+};
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+# Typography
+
+**Font:** Inter
+
+**Weights:** 400(regular), 600(SemiBold)
+
+<Typeset
+  fontSizes={[
+    typography.size.xs,
+    typography.size.sm,
+    typography.size.base,
+    typography.size.lg,
+    typography.size.xl,
+    typography.size["2xl"],
+    typography.size["3xl"],
+    typography.size["4xl"],
+  ]}
+  fontWeight={typography.weight.semiBold}
+  sampleText={SampleText}
+  fontFamily={typography.type.sans}
+/>
