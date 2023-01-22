@@ -1,16 +1,19 @@
 import { type VariantProps, cva } from "cva";
 import { clsx } from "clsx";
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes, SVGProps } from "react";
+import { Loading } from "icons";
 const button = cva(
   "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",
   {
     variants: {
+      /** The size of the Button */
       size: {
         normal: "px-8 py-4 text-lg leading-6",
         medium: "px-8 py-[14px] text-base leading-5",
         small: "px-6 py-2 text-sm leading-4",
       },
-      level: {
+      /** The variant of the Button */
+      variant: {
         primary: [
           "bg-Primary-M_Blue text-Neutral-White",
           "hover:bg-Primary-Navy",
@@ -39,57 +42,71 @@ const button = cva(
     },
     defaultVariants: {
       size: "medium",
-      level: "primary",
+      variant: "primary",
     },
   }
 );
+
 interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof button> {
+  /** If true, the button will show a spinner. */
   isLoading?: boolean;
-  disabled?: boolean;
+  /** If true, the button will be disabled. */
+  isDisabled?: boolean;
+  /** If added, the button will show an icon before the button's label. */
+  leftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  /** If added, the button will show an icon after the button's label. */
+  rightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
 }
+
+/**
+ * Button component is used to trigger an action or event, such as submitting a form,
+ * opening a Dialog, canceling an action, or performing a delete operation.
+ */
 export function Button({
-  level,
-  size,
-  disabled = false,
+  variant = "primary",
+  size = "medium",
+  isDisabled = false,
   isLoading = false,
+  leftIcon,
+  rightIcon,
   ...props
 }: ButtonProps) {
   return (
     <button
       type="button"
-      className={button({ size, level })}
-      disabled={disabled}
+      className={button({ size, variant })}
+      disabled={isDisabled}
       data-loading={isLoading}
-      tabIndex={disabled || isLoading ? -1 : 0}
+      tabIndex={isDisabled || isLoading ? -1 : 0}
       {...props}
     >
+      {leftIcon && !isLoading && (
+        <Icon icon={leftIcon} size={size !== "normal" ? "small" : "normal"} />
+      )}
       {props?.children ?? "Label"}
       {isLoading && (
-        <span
-          className={clsx(
-            "flex justify-center items-center align-middle",
-            size === "normal" && "w-6 h-6",
-            size !== "normal" && "w-4 h-4"
-          )}
-        >
-          <LoadingIcon />
-        </span>
+        <Icon icon={Loading} size={size !== "normal" ? "small" : "normal"} />
+      )}
+      {rightIcon && !isLoading && (
+        <Icon icon={rightIcon} size={size !== "normal" ? "small" : "normal"} />
       )}
     </button>
   );
 }
-function LoadingIcon() {
+interface IconProps extends HTMLAttributes<SVGSVGElement> {
+  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
+  size?: "small" | "normal";
+}
+function Icon({ icon: Icon, size = "normal", ...props }: IconProps) {
+  let iconClass = clsx(
+    size === "normal" && "w-6 h-6",
+    size !== "normal" && "w-4 h-4"
+  );
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none">
-      <path
-        stroke="currentcolor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.5"
-        d="M11 1v3M11 18v3M21 11h-3M4 11H1M18.071 3.929 15.95 6.05M6.05 15.95l-2.121 2.121M3.929 3.929 6.05 6.05M15.95 15.95l2.12 2.121"
-      />
-    </svg>
+    <span>
+      <Icon viewBox="0 0 24 24" className={iconClass} {...props} />
+    </span>
   );
 }

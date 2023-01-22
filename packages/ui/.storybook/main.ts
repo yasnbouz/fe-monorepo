@@ -1,5 +1,4 @@
-import { StorybookConfig } from "@storybook/core-common";
-
+import type { StorybookConfig } from "@storybook/types";
 const config: StorybookConfig = {
   stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -8,10 +7,14 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "storybook-addon-designs",
   ],
+
   framework: {
     name: "@storybook/react-vite",
     options: {},
   },
   staticDirs: ["../public"],
+  docs: {
+    autodocs: true,
+  },
 };
 module.exports = config;

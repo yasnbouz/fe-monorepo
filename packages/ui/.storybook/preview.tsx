@@ -9,21 +9,10 @@ export const parameters = {
     },
   },
   backgrounds: {
-    default: "Light",
-    values: [
-      {
-        name: "Light",
-        value: "#fefefe",
-      },
-      {
-        name: "Dark",
-        value: "#272727",
-      },
-    ],
     grid: {
-      cellSize: 8,
+      cellSize: 4,
       opacity: 0.5,
-      cellAmount: 8,
+      cellAmount: 5,
     },
   },
 };
