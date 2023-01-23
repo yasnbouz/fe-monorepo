@@ -1,5 +1,3 @@
-// .svgrrc.js
-
 const svgoConfig = {
   multipass: true,
   plugins: [
@@ -18,4 +16,5 @@ const svgoConfig = {
 module.exports = {
   svgoConfig,
   typescript: true,
+  jsxRuntime: "automatic",
 };

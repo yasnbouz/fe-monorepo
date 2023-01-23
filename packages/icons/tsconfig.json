@@ -1,8 +1,0 @@
-{
-  "extends": "tsconfig/react-library",
-  "include": ["dist/**/*.ts"],
-  "compilerOptions": {
-    "declarationMap": false,
-    "emitDeclarationOnly": true
-  }
-}

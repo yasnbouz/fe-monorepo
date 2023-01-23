@@ -4,18 +4,17 @@
   "description": "Transform Icons into Optimized React Component",
   "license": "ISC",
   "main": "./dist/index.ts",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.ts",
   "files": [
     "dist/*"
   ],
   "scripts": {
-    "dev": "rm -rf dist && svgr -d dist -- src && tsc"
+    "build": "rm -rf dist && svgr -d dist -- src"
   },
   "devDependencies": {
     "@svgr/cli": "6.5.1",
     "@types/react": "18.0.27",
-    "react": "18.2.0",
-    "tsconfig": "workspace:*"
+    "react": "18.2.0"
   },
   "pnpm": {
     "overrides": {
