@@ -6,6 +6,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "storybook-addon-designs",
+    "storybook-addon-pseudo-states",
   ],
   typescript: {
     check: false,
@@ -23,8 +24,5 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ["../public"],
-  docs: {
-    autodocs: true,
-  },
 };
 module.exports = config;

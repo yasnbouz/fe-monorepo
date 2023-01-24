@@ -37,3 +37,5 @@ export const Medium: Story = { args: { size: "medium" } };
 export const Small: Story = { args: { size: "small" } };
 export const IconRight: Story = { args: { rightIcon: Right } };
 export const IconLeft: Story = { args: { leftIcon: Plus } };
+export const Hover: Story = {};
+Hover.parameters = { pseudo: { hover: true } };
