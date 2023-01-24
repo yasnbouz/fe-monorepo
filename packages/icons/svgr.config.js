@@ -15,6 +15,6 @@ const svgoConfig = {
 };
 module.exports = {
   svgoConfig,
+  svgProps: { "aria-hidden": "true", focusable: "false" },
   typescript: true,
-  jsxRuntime: "automatic",
 };

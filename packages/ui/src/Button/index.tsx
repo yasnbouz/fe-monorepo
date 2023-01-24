@@ -1,7 +1,7 @@
 import { type VariantProps, cva } from "cva";
-import { clsx } from "clsx";
 import type { HTMLAttributes, SVGProps } from "react";
 import { Loading } from "icons";
+import { Icon } from "../Icon/Icon";
 
 const button = cva(
   "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",
@@ -84,30 +84,15 @@ export function Button({
       {...props}
     >
       {leftIcon && !isLoading && (
-        <Icon icon={leftIcon} size={size !== "normal" ? "small" : "normal"} />
+        <Icon icon={leftIcon} size={size === "normal" ? "md" : "sm"} />
       )}
       {props?.children ?? "Label"}
       {isLoading && (
-        <Icon icon={Loading} size={size !== "normal" ? "small" : "normal"} />
+        <Icon icon={Loading} size={size === "normal" ? "md" : "sm"} />
       )}
       {rightIcon && !isLoading && (
-        <Icon icon={rightIcon} size={size !== "normal" ? "small" : "normal"} />
+        <Icon icon={rightIcon} size={size === "normal" ? "md" : "sm"} />
       )}
     </button>
-  );
-}
-interface IconProps extends HTMLAttributes<SVGSVGElement> {
-  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
-  size?: "small" | "normal";
-}
-function Icon({ icon: Icon, size = "normal", ...props }: IconProps) {
-  let iconClass = clsx(
-    size === "normal" && "w-6 h-6",
-    size !== "normal" && "w-4 h-4"
-  );
-  return (
-    <span>
-      <Icon viewBox="0 0 24 24" className={iconClass} {...props} />
-    </span>
   );
 }
