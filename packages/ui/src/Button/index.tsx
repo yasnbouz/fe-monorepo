@@ -23,15 +23,15 @@ const button = cva(
           "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:cursor-not-allowed",
         ],
         secondary: [
-          "bg-Neutral-White text-Primary-M_Blue ring-1 ring-inset ring-Primary-M_Blue",
+          "bg-transparent text-Primary-M_Blue ring-1 ring-inset ring-Primary-M_Blue",
           "hover:bg-Primary-L_Blue",
           "focus-visible:bg-Primary-L_Blue focus-visible:outline-none focus-visible:ring-Neutral-Black",
-          "active:ring-0",
+          "active:bg-Primary-L_Blue active:ring-0",
           "data-[loading=true]:bg-Primary-L_Blue data-[loading=true]:text-Primary-M_Blue data-[loading=true]:ring-0 data-[loading=true]:cursor-not-allowed",
           "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:ring-0 disabled:cursor-not-allowed",
         ],
         tertiary: [
-          "bg-Neutral-White text-Primary-M_Blue",
+          "bg-transparent text-Primary-M_Blue",
           "hover:bg-Primary-L_Blue",
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-Neutral-Black",
           "active:bg-Primary-Sky active:ring-0",

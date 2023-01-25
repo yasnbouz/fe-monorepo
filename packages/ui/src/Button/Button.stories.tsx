@@ -38,13 +38,51 @@ export const Small: Story = { args: { size: "small" } };
 export const IconRight: Story = { args: { rightIcon: Right } };
 export const IconLeft: Story = { args: { leftIcon: Plus } };
 export const Buttons = () => (
-  <div className="space-x-2">
-    <Button>Default</Button>
-    <Button data-hover>Hover</Button>
-    <Button data-focus>focus</Button>
-    <Button data-active>Click</Button>
-    <Button isLoading>Loading</Button>
-    <Button isDisabled>Disabled</Button>
+  <div className="space-y-4">
+    <div className="flex flex-wrap gap-2">
+      <Button>Primary</Button>
+      <Button data-hover>Hover</Button>
+      <Button data-focus>focus</Button>
+      <Button data-active>Click</Button>
+      <Button isLoading>Loading</Button>
+      <Button isDisabled>Disabled</Button>
+    </div>
+    <div className="flex flex-wrap gap-2">
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="secondary" data-hover>
+        Hover
+      </Button>
+      <Button variant="secondary" data-focus>
+        focus
+      </Button>
+      <Button variant="secondary" data-active>
+        Click
+      </Button>
+      <Button variant="secondary" isLoading>
+        Loading
+      </Button>
+      <Button variant="secondary" isDisabled>
+        Disabled
+      </Button>
+    </div>
+    <div className="flex flex-wrap gap-2">
+      <Button variant="tertiary">Tertiary</Button>
+      <Button variant="tertiary" data-hover>
+        Hover
+      </Button>
+      <Button variant="tertiary" data-focus>
+        focus
+      </Button>
+      <Button variant="tertiary" data-active>
+        Click
+      </Button>
+      <Button variant="tertiary" isLoading>
+        Loading
+      </Button>
+      <Button variant="tertiary" isDisabled>
+        Disabled
+      </Button>
+    </div>
   </div>
 );
 Buttons.parameters = {
