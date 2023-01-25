@@ -15,6 +15,10 @@ export const parameters = {
       cellAmount: 5,
     },
   },
+  pseudo: false,
+};
+export const globals = {
+  pseudo: false,
 };
 export const decorators = [
   (Story) => (

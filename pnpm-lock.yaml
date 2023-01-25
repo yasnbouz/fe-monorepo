@@ -177,7 +177,7 @@ importers:
       react-dom: ^18.2.0
       storybook: 7.0.0-beta.32
       storybook-addon-designs: beta
-      storybook-addon-pseudo-states: 1.15.2
+      storybook-addon-pseudo-states: 2.0.0-next.0
       tailwind-config: workspace:*
       tailwindcss: ^3.2.4
       typescript: ^4.9.3
@@ -202,8 +202,8 @@ importers:
       npm-run-all: 4.1.5
       prop-types: 15.8.1
       storybook: 7.0.0-beta.32
-      storybook-addon-designs: 7.0.0-beta.2_hogqkvagexdarhqftfiqv3neue
-      storybook-addon-pseudo-states: 1.15.2_pmt6gdvpkbsejpsyufhkfrbkda
+      storybook-addon-designs: 7.0.0-beta.2_xvnqsm6st7qtxp7fs63qirgvei
+      storybook-addon-pseudo-states: 2.0.0-next.0_biqbaboplfbrettd7655fr4n2y
       tailwind-config: link:../tailwind-config
       tailwindcss: 3.2.4_postcss@8.4.21
       typescript: 4.9.4
@@ -12412,7 +12412,7 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
-  /storybook-addon-designs/7.0.0-beta.2_hogqkvagexdarhqftfiqv3neue:
+  /storybook-addon-designs/7.0.0-beta.2_xvnqsm6st7qtxp7fs63qirgvei:
     resolution: {integrity: sha512-ljBNmyCJdPTXhiBSfA1S+GBxtMooW2M7nxlt49OoCRH7jcxZOYQdiI8JYQiMF5Ur0MGakbSci0Xm+JzAvcm02g==}
     peerDependencies:
       '@storybook/addon-docs': ^6.4.0 || ^7.0.0
@@ -12432,20 +12432,18 @@ packages:
       '@storybook/addon-docs': 6.5.15_uo3efmxzlo6oik6iaxblvhk4he
       '@storybook/addons': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/api': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/components': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/theming': 6.5.15_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
 
-  /storybook-addon-pseudo-states/1.15.2_pmt6gdvpkbsejpsyufhkfrbkda:
-    resolution: {integrity: sha512-YMjzct/747PyCfzAD2469283gbBSdK3pMfuPg4nq5ZtPzfDAkaiGlxPnXNL9dMA2Bo1PLgNJ3f9u2Kh1OfuPlw==}
+  /storybook-addon-pseudo-states/2.0.0-next.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-KvM8FUTsHm+plP2OkgHDE65a8p7c8Dp6H9zvV7RZ38uIJHm8hJ2NZplNLqLv20i/mK6zSq7p6uU98izF/L4UXw==}
     peerDependencies:
-      '@storybook/addons': ^6.5.0
-      '@storybook/api': ^6.5.0
-      '@storybook/components': ^6.5.0
-      '@storybook/core-events': ^6.5.0
-      '@storybook/theming': ^6.5.0
+      '@storybook/components': next
+      '@storybook/core-events': next
+      '@storybook/manager-api': next
+      '@storybook/preview-api': next
+      '@storybook/theming': next
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
@@ -12454,11 +12452,6 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@storybook/addons': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/api': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/components': 6.5.15_biqbaboplfbrettd7655fr4n2y
-      '@storybook/core-events': 6.5.15
-      '@storybook/theming': 6.5.15_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true

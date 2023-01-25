@@ -2,7 +2,6 @@ import { type VariantProps, cva } from "cva";
 import type { HTMLAttributes, SVGProps } from "react";
 import { Loading } from "icons";
 import { Icon } from "../Icon/Icon";
-
 const button = cva(
   "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",
   {
@@ -20,24 +19,24 @@ const button = cva(
           "hover:bg-Primary-Navy",
           "focus-visible:bg-Primary-Navy focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-Neutral-Black",
           "active:bg-Primary-D_Blue active:ring-0",
-          "data-[loading=true]:bg-Primary-D_Blue data-[loading=true]:cursor-default",
-          "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue",
+          "data-[loading=true]:bg-Primary-D_Blue data-[loading=true]:cursor-not-allowed",
+          "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:cursor-not-allowed",
         ],
         secondary: [
           "bg-Neutral-White text-Primary-M_Blue ring-1 ring-inset ring-Primary-M_Blue",
           "hover:bg-Primary-L_Blue",
           "focus-visible:bg-Primary-L_Blue focus-visible:outline-none focus-visible:ring-Neutral-Black",
           "active:ring-0",
-          "data-[loading=true]:bg-Primary-L_Blue data-[loading=true]:text-Primary-M_Blue data-[loading=true]:ring-0 data-[loading=true]:cursor-default",
-          "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:ring-0",
+          "data-[loading=true]:bg-Primary-L_Blue data-[loading=true]:text-Primary-M_Blue data-[loading=true]:ring-0 data-[loading=true]:cursor-not-allowed",
+          "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:ring-0 disabled:cursor-not-allowed",
         ],
         tertiary: [
           "bg-Neutral-White text-Primary-M_Blue",
           "hover:bg-Primary-L_Blue",
           "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-Neutral-Black",
           "active:bg-Primary-Sky active:ring-0",
-          "data-[loading=true]:bg-Primary-Sky data-[loading=true]:cursor-default",
-          "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue",
+          "data-[loading=true]:bg-Primary-Sky data-[loading=true]:cursor-not-allowed",
+          "disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:cursor-not-allowed",
         ],
       },
     },

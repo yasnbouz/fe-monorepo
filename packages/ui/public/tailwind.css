@@ -556,6 +556,12 @@ video {
        column-gap: 0.5rem;
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .rounded-3xl {
   border-radius: 0.25rem;
 }
@@ -710,6 +716,10 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
 .disabled\:bg-Primary-L_Blue:disabled {
   --tw-bg-opacity: 1;
   background-color: rgb(238 245 252 / var(--tw-bg-opacity));
@@ -726,8 +736,8 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.data-\[loading\=true\]\:cursor-default[data-loading=true] {
-  cursor: default;
+.data-\[loading\=true\]\:cursor-not-allowed[data-loading=true] {
+  cursor: not-allowed;
 }
 
 .data-\[loading\=true\]\:bg-Primary-D_Blue[data-loading=true] {

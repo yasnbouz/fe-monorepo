@@ -37,5 +37,20 @@ export const Medium: Story = { args: { size: "medium" } };
 export const Small: Story = { args: { size: "small" } };
 export const IconRight: Story = { args: { rightIcon: Right } };
 export const IconLeft: Story = { args: { leftIcon: Plus } };
-export const Hover: Story = {};
-Hover.parameters = { pseudo: { hover: true } };
+export const Buttons = () => (
+  <div className="space-x-2">
+    <Button>Default</Button>
+    <Button data-hover>Hover</Button>
+    <Button data-focus>focus</Button>
+    <Button data-active>Click</Button>
+    <Button isLoading>Loading</Button>
+    <Button isDisabled>Disabled</Button>
+  </div>
+);
+Buttons.parameters = {
+  pseudo: {
+    hover: ["[data-hover]"],
+    active: "[data-active]",
+    focusVisible: ["[data-focus]"],
+  },
+};
