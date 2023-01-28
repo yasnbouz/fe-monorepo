@@ -1,14 +1,13 @@
-import { Button } from "@hu/ui";
-import { ArrowDownSquare } from "@hu/icons";
+import { Button, Icon } from "@hu/ui";
+import { Plus } from "@hu/icons";
 
 export default function Web() {
   return (
     <div className="font-sans">
       <div>
-        <Button variant="primary" size={"normal"} leftIcon={ArrowDownSquare}>
-          Hello
+        <Button variant="primary" size="normal" LeftIcon={<Plus />}>
+          dont touch me
         </Button>
-        <Button variant="secondary">Hello</Button>
       </div>
       <p className="text-xl leading-6">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.

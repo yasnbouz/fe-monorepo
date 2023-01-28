@@ -13,11 +13,12 @@
     "watch:storybook": "storybook dev -p 6008 --no-open"
   },
   "dependencies": {
+    "@hu/icons": "workspace:*",
     "clsx": "^1.2.1",
     "cva": "npm:class-variance-authority@0.4.0",
-    "@hu/icons": "workspace:*",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "1.8.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.0.0-beta.33",

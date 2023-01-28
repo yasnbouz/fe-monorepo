@@ -9,6 +9,7 @@ export const parameters = {
     },
   },
   backgrounds: {
+    default: "light",
     grid: {
       cellSize: 4,
       opacity: 0.5,

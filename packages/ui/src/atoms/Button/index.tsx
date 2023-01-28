@@ -1,7 +1,7 @@
 import { type VariantProps, cva } from "cva";
-import type { HTMLAttributes, SVGProps } from "react";
+import type { ReactNode, MouseEvent } from "react";
 import { Loading } from "@hu/icons";
-import { Icon } from "../Icon/Icon";
+import { Icon } from "../Icon";
 const button = cva(
   "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",
   {
@@ -47,17 +47,18 @@ const button = cva(
   }
 );
 
-interface ButtonProps
-  extends HTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {
+interface ButtonProps extends VariantProps<typeof button> {
   /** If true, the button will show a spinner. */
   isLoading?: boolean;
   /** If true, the button will be disabled. */
   isDisabled?: boolean;
   /** If added, the button will show an icon before the button's label. */
-  leftIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  LeftIcon?: ReactNode;
   /** If added, the button will show an icon after the button's label. */
-  rightIcon?: React.ComponentType<SVGProps<SVGSVGElement>>;
+  RightIcon?: ReactNode;
+  /** On click event */
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  children?: ReactNode;
 }
 
 /**
@@ -69,8 +70,10 @@ export function Button({
   size = "medium",
   isDisabled = false,
   isLoading = false,
-  leftIcon,
-  rightIcon,
+  LeftIcon,
+  RightIcon,
+  onClick,
+  children,
   ...props
 }: ButtonProps) {
   return (
@@ -80,17 +83,20 @@ export function Button({
       disabled={isDisabled}
       data-loading={isLoading}
       tabIndex={isDisabled || isLoading ? -1 : 0}
+      onClick={onClick}
       {...props}
     >
-      {leftIcon && !isLoading && (
-        <Icon icon={leftIcon} size={size === "normal" ? "md" : "sm"} />
+      {LeftIcon && !isLoading && (
+        <Icon size={size === "normal" ? "md" : "sm"}>{LeftIcon}</Icon>
       )}
-      {props?.children ?? "Label"}
+      {children ?? "Label"}
       {isLoading && (
-        <Icon icon={Loading} size={size === "normal" ? "md" : "sm"} />
+        <Icon className="animate-spin" size={size === "normal" ? "md" : "sm"}>
+          {<Loading />}
+        </Icon>
       )}
-      {rightIcon && !isLoading && (
-        <Icon icon={rightIcon} size={size === "normal" ? "md" : "sm"} />
+      {RightIcon && !isLoading && (
+        <Icon size={size === "normal" ? "md" : "sm"}>{RightIcon}</Icon>
       )}
     </button>
   );

@@ -1,10 +1,11 @@
 import { Meta, IconGallery, IconItem } from "@storybook/addon-docs";
-import { Icon } from "../Icon/Icon";
+import { Icon } from "../atoms/Icon";
 import {
   ChevronDownSquare,
   ChevronUpSquare,
   ChevronRightSquare,
   ChevronLeftSquare,
+  Plus,
 } from "@hu/icons";
 
 <Meta title="tokens/Icons" />;
@@ -20,25 +21,35 @@ import {
 ### 24
 
 <IconGallery>
-  <IconItem name="ChevronDownSquare">
-    <Icon icon={ChevronDownSquare} size="md" />
+  <IconItem name="Plus">
+    <Icon size="md">
+      <Plus />
+    </Icon>
   </IconItem>
   <IconItem name="ChevronUpSquare">
-    <Icon icon={ChevronUpSquare} size="md" />
+    <Icon size="md">
+      <ChevronUpSquare />
+    </Icon>
   </IconItem>
   <IconItem name="ChevronRightSquare">
-    <Icon icon={ChevronRightSquare} size="md" />
+    <Icon size="md">
+      <ChevronRightSquare />
+    </Icon>
   </IconItem>
   <IconItem name="ChevronLeftSquare">
-    <Icon icon={ChevronLeftSquare} size="md" />
+    <Icon size="md">
+      <ChevronLeftSquare />
+    </Icon>
   </IconItem>
 </IconGallery>
 
 ### 16
 
 <IconGallery>
-  <IconItem name="ChevronDownSquare">
-    <Icon icon={ChevronDownSquare} size="sm" />
+  <IconItem name="Plus">
+    <Icon size="sm">
+      <Plus />
+    </Icon>
   </IconItem>
 </IconGallery>
 
@@ -50,7 +61,9 @@ import {
 
 <IconGallery>
   <IconItem name="ChevronDownSquare">
-    <Icon icon={ChevronDownSquare} size="md" />
+    <Icon size="md">
+      <ChevronDownSquare />
+    </Icon>
   </IconItem>
 </IconGallery>
 
@@ -58,6 +71,8 @@ import {
 
 <IconGallery>
   <IconItem name="ChevronDownSquare">
-    <Icon icon={ChevronDownSquare} size="sm" />
+    <Icon size="md">
+      <ChevronDownSquare />
+    </Icon>
   </IconItem>
 </IconGallery>

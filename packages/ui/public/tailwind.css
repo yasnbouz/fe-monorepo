@@ -541,6 +541,16 @@ video {
   flex-shrink: 0;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
 .select-none {
   -webkit-user-select: none;
      -moz-user-select: none;

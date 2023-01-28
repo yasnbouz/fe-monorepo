@@ -12,7 +12,7 @@ const config = {
       preventFullImport: true,
     },
     "@hu/ui": {
-      transform: "@hu/ui/src/{{member}}",
+      transform: "@hu/ui/src/atoms/{{member}}",
       skipDefaultConversion: true,
       preventFullImport: true,
     },
