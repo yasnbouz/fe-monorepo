@@ -1,5 +1,5 @@
 {
-  "name": "design-monorepo",
+  "name": "frontend-monorepo",
   "version": "0.0.0",
   "private": true,
   "workspaces": [
@@ -16,6 +16,7 @@
     "storybook:serve": "turbo run storybook:serve --parallel"
   },
   "devDependencies": {
+    "cross-env": "7.0.3",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "turbo": "1.6.3"

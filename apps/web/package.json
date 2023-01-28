@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,18 +8,18 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6007",
-    "storybook:build": "storybook build --quiet",
-    "storybook:serve": "pnpx live-server storybook-static --port=6007"
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
-    "icons": "workspace:*",
+    "@hu/icons": "workspace:*",
     "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "@hu/ui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@next/bundle-analyzer": "13.1.5",
     "@storybook/addon-essentials": "7.0.0-beta.33",
     "@storybook/addon-interactions": "7.0.0-beta.33",
     "@storybook/addon-links": "7.0.0-beta.33",

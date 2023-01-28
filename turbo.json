@@ -5,6 +5,9 @@
       "dependsOn": [
         "^build"
       ],
+      "env": [
+        "ANALYZE"
+      ],
       "outputs": [
         "dist/**",
         ".next/**"
@@ -20,14 +23,6 @@
     "storybook": {
       "cache": false,
       "persistent": true
-    },
-    "storybook:build": {
-      "outputs": [
-        "storybook-static/**"
-      ]
-    },
-    "storybook:serve": {
-      "cache": false
     }
   }
 }

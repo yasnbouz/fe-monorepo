@@ -1,4 +1,4 @@
-import { Button } from "ui";
+import { Button } from "@hu/ui";
 import { Welcome } from "../src/components/Welcome";
 
 export default function Docs() {

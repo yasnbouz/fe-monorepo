@@ -1,6 +1,6 @@
 import { type VariantProps, cva } from "cva";
 import type { HTMLAttributes, SVGProps } from "react";
-import { Loading } from "icons";
+import { Loading } from "@hu/icons";
 import { Icon } from "../Icon/Icon";
 const button = cva(
   "rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2",

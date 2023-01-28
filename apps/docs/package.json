@@ -1,21 +1,19 @@
 {
   "name": "docs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build --quiet",
-    "storybook:serve": "pnpx live-server storybook-static --cors --port=6006"
+    "storybook": "storybook dev -p 6006"
   },
   "dependencies": {
     "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "@hu/ui": "workspace:*"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
