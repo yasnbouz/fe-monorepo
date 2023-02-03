@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from ".";
-import { Right, Plus } from "@hu/icons";
+import { ArrowRight, Plus } from "@hu/icons";
 
 const meta: Meta = {
   component: Button,
@@ -41,7 +41,7 @@ export const Normal: Story = { args: { ...Default.args, size: "normal" } };
 export const Medium: Story = { args: { ...Default.args, size: "medium" } };
 export const Small: Story = { args: { ...Default.args, size: "small" } };
 export const IconRight: Story = {
-  args: { ...Default.args, icon: <Right />, iconPosition: "Right" },
+  args: { ...Default.args, icon: <ArrowRight />, iconPosition: "Right" },
 };
 export const IconLeft: Story = { args: { ...Default.args, icon: <Plus /> } };
 export const Buttons: Story = {
