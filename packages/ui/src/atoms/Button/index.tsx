@@ -52,10 +52,10 @@ interface ButtonProps extends VariantProps<typeof button> {
   isLoading?: boolean;
   /** If true, the button will be disabled. */
   isDisabled?: boolean;
-  /** If added, the button will show an icon before the button's label. */
-  LeftIcon?: ReactNode;
-  /** If added, the button will show an icon after the button's label. */
-  RightIcon?: ReactNode;
+  /** If added, the button will show an icon. */
+  icon?: ReactNode;
+  /** By Default is Left, let you choose where to put the icon after or before the button label. */
+  iconPosition?: "Left" | "Right";
   /** On click event */
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
@@ -70,12 +70,13 @@ export function Button({
   size = "medium",
   isDisabled = false,
   isLoading = false,
-  LeftIcon,
-  RightIcon,
+  icon,
+  iconPosition = "Left",
   onClick,
   children,
   ...props
 }: ButtonProps) {
+  const renderIcon = <Icon size={size === "normal" ? "md" : "sm"}>{icon}</Icon>;
   return (
     <button
       type="button"
@@ -86,18 +87,14 @@ export function Button({
       onClick={onClick}
       {...props}
     >
-      {LeftIcon && !isLoading && (
-        <Icon size={size === "normal" ? "md" : "sm"}>{LeftIcon}</Icon>
-      )}
-      {children ?? "Label"}
+      {iconPosition === "Left" && icon && !isLoading && renderIcon}
+      {children}
       {isLoading && (
         <Icon className="animate-spin" size={size === "normal" ? "md" : "sm"}>
           {<Loading />}
         </Icon>
       )}
-      {RightIcon && !isLoading && (
-        <Icon size={size === "normal" ? "md" : "sm"}>{RightIcon}</Icon>
-      )}
+      {iconPosition === "Right" && icon && !isLoading && renderIcon}
     </button>
   );
 }

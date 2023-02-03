@@ -29,14 +29,21 @@ export default meta;
 
 // Stories
 type Story = StoryObj<typeof Button>;
-export const Primary: Story = { args: { variant: "primary" } };
-export const Secondary: Story = { args: { variant: "secondary" } };
-export const Tertiary: Story = { args: { variant: "tertiary" } };
-export const Normal: Story = { args: { size: "normal" } };
-export const Medium: Story = { args: { size: "medium" } };
-export const Small: Story = { args: { size: "small" } };
-export const IconRight: Story = { args: { RightIcon: <Right /> } };
-export const IconLeft: Story = { args: { LeftIcon: <Plus /> } };
+const Default: Story = { args: { children: "Label" } };
+export const Primary: Story = { args: { ...Default.args, variant: "primary" } };
+export const Secondary: Story = {
+  args: { ...Default.args, variant: "secondary" },
+};
+export const Tertiary: Story = {
+  args: { ...Default.args, variant: "tertiary" },
+};
+export const Normal: Story = { args: { ...Default.args, size: "normal" } };
+export const Medium: Story = { args: { ...Default.args, size: "medium" } };
+export const Small: Story = { args: { ...Default.args, size: "small" } };
+export const IconRight: Story = {
+  args: { ...Default.args, icon: <Right />, iconPosition: "Right" },
+};
+export const IconLeft: Story = { args: { ...Default.args, icon: <Plus /> } };
 export const Buttons: Story = {
   render: (args) => (
     <div className="space-y-4">
