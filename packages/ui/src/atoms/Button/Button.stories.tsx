@@ -1,47 +1,47 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from ".";
-import { ArrowRight, Plus } from "@hu/icons";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '.';
+import { ArrowRight, Plus } from '@hu/icons';
 
 const meta: Meta = {
   component: Button,
-  title: "atoms/Button",
+  title: 'atoms/Button',
   argTypes: {
     isLoading: {
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
     isDisabled: {
       control: {
-        type: "boolean",
+        type: 'boolean',
       },
     },
   },
   parameters: {
     design: {
-      type: "figma",
-      url: "https://www.figma.com/file/nIC5UpUdW47ZS6BBsovLBg/Design-System-(Community)?node-id=8%3A5&t=c9rM0sAsOYRru4ew-1",
+      type: 'figma',
+      url: 'https://www.figma.com/file/nIC5UpUdW47ZS6BBsovLBg/Design-System-(Community)?node-id=8%3A5&t=c9rM0sAsOYRru4ew-1',
     },
   },
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 export default meta;
 
 // Stories
 type Story = StoryObj<typeof Button>;
-const Default: Story = { args: { children: "Label" } };
-export const Primary: Story = { args: { ...Default.args, variant: "primary" } };
+const Default: Story = { args: { children: 'Label' } };
+export const Primary: Story = { args: { ...Default.args, variant: 'primary' } };
 export const Secondary: Story = {
-  args: { ...Default.args, variant: "secondary" },
+  args: { ...Default.args, variant: 'secondary' },
 };
 export const Tertiary: Story = {
-  args: { ...Default.args, variant: "tertiary" },
+  args: { ...Default.args, variant: 'tertiary' },
 };
-export const Normal: Story = { args: { ...Default.args, size: "normal" } };
-export const Medium: Story = { args: { ...Default.args, size: "medium" } };
-export const Small: Story = { args: { ...Default.args, size: "small" } };
+export const Normal: Story = { args: { ...Default.args, size: 'normal' } };
+export const Medium: Story = { args: { ...Default.args, size: 'medium' } };
+export const Small: Story = { args: { ...Default.args, size: 'small' } };
 export const IconRight: Story = {
-  args: { ...Default.args, icon: <ArrowRight />, iconPosition: "Right" },
+  args: { ...Default.args, icon: <ArrowRight />, iconPosition: 'Right' },
 };
 export const IconLeft: Story = { args: { ...Default.args, icon: <Plus /> } };
 export const Buttons: Story = {
@@ -100,8 +100,8 @@ export const Buttons: Story = {
 };
 Buttons.parameters = {
   pseudo: {
-    hover: ["[data-hover]"],
-    active: "[data-active]",
-    focusVisible: ["[data-focus]"],
+    hover: ['[data-hover]'],
+    active: '[data-active]',
+    focusVisible: ['[data-focus]'],
   },
 };

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -9,7 +9,7 @@ export const parameters = {
     },
   },
   backgrounds: {
-    default: "light",
+    default: 'light',
     grid: {
       cellSize: 4,
       opacity: 0.5,

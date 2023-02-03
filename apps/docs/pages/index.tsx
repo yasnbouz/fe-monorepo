@@ -1,5 +1,5 @@
-import { Button } from "@hu/ui";
-import { Welcome } from "../src/components/Welcome";
+import { Button } from '@hu/ui';
+import { Welcome } from '../src/components/Welcome';
 
 export default function Docs() {
   return (
