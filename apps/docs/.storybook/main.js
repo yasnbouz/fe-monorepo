@@ -12,4 +12,5 @@ module.exports = {
   docs: {
     autodocs: "tag",
   },
+  core: { disableTelemetry: true },
 };

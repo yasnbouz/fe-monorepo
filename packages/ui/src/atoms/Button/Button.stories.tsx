@@ -4,7 +4,7 @@ import { Right, Plus } from "@hu/icons";
 
 const meta: Meta = {
   component: Button,
-  title: "Design System/Button",
+  title: "atoms/Button",
   argTypes: {
     isLoading: {
       control: {
