@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint --parallel",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,json}\"",
     "storybook": "turbo run storybook --parallel",
     "storybook:build": "turbo run storybook:build --parallel",
     "storybook:serve": "turbo run storybook:serve --parallel"
@@ -23,12 +23,6 @@
   },
   "engines": {
     "node": ">=14.0.0"
-  },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "printWidth": 80,
-    "tabWidth": 2
   },
   "packageManager": "pnpm@7.18.2"
 }
