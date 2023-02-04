@@ -1,14 +1,14 @@
 /** @type {import("next").NextConfig} */
 const config = {
   reactStrictMode: true,
-  transpilePackages: ["@hu/ui", "@hu/icons"],
+  transpilePackages: ['@hu/ui', '@hu/icons'],
   modularizeImports: {
-    "@hu/icons": {
-      transform: "@hu/icons/dist/{{member}}",
+    '@hu/icons': {
+      transform: '@hu/icons/dist/{{member}}',
       preventFullImport: true,
     },
-    "@hu/ui": {
-      transform: "@hu/ui/src/atoms/{{member}}",
+    '@hu/ui': {
+      transform: '@hu/ui/src/atoms/{{member}}',
       skipDefaultConversion: true,
       preventFullImport: true,
     },

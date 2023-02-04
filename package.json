@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint --parallel",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,json}\"",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json}\"",
     "storybook": "turbo run storybook --parallel",
     "storybook:build": "turbo run storybook:build --parallel",
     "storybook:serve": "turbo run storybook:serve --parallel"

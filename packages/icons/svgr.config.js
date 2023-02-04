@@ -2,7 +2,7 @@ const svgoConfig = {
   multipass: true,
   plugins: [
     {
-      name: "preset-default",
+      name: 'preset-default',
       params: {
         overrides: {
           convertColors: {
@@ -16,8 +16,8 @@ const svgoConfig = {
 module.exports = {
   svgoConfig,
   svgProps: {
-    "aria-hidden": "true",
-    focusable: "false",
+    'aria-hidden': 'true',
+    focusable: 'false',
   },
   typescript: true,
 };
