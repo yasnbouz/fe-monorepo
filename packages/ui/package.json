@@ -5,6 +5,7 @@
   "main": "./src/index.ts",
   "type": "module",
   "scripts": {
+    "type-check": "tsc --noEmit",
     "storybook": "run-p watch:*",
     "build-storybook": "run-p build:*",
     "build:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css",
@@ -37,6 +38,7 @@
     "storybook-addon-designs": "beta",
     "storybook-addon-pseudo-states": "2.0.0-next.0",
     "tailwind-config": "workspace:*",
+    "tsconfig": "workspace:*",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
     "vite": "^4.0.0"
