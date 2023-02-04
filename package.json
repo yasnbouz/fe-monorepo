@@ -9,7 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint --parallel",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,md}\"",
     "storybook": "turbo run storybook --parallel",
     "storybook:build": "turbo run storybook:build --parallel",
