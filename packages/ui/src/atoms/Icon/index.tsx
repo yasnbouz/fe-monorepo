@@ -14,7 +14,7 @@ interface IconProps {
 }
 export function Icon({ size = 'md', className, children }: IconProps) {
   const icon = Children.only(children);
-  let iconClass = cn(
+  const iconClass = cn(
     'flex-shrink-0',
     size === 'md' && '!w-6 !h-6',
     size !== 'md' && '!w-4 !h-4',

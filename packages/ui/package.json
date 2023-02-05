@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "main": "./src/index.ts",
   "scripts": {
-    "type-check": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "lint": "eslint --fix \"src/**/*.+(ts|tsx)\"",
     "storybook": "run-p watch:*",
     "build-storybook": "run-p build:*",

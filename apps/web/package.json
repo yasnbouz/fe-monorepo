@@ -7,15 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
+    "typecheck": "tsc --noEmit",
     "storybook": "storybook dev -p 6007",
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@hu/icons": "workspace:*",
+    "@hu/ui": "workspace:*",
     "next": "^13.1.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "@hu/ui": "workspace:*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

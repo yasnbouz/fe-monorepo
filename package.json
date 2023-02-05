@@ -10,6 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint --parallel",
+    "typecheck": "turbo run typecheck --parallel",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json}\"",
     "storybook": "turbo run storybook --parallel",
     "storybook:build": "turbo run storybook:build --parallel",
