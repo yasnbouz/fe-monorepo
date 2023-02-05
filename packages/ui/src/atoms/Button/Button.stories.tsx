@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '.';
+import { Button, ButtonProps } from '.';
 import { ArrowRight, Plus } from '@hu/icons';
 
 const meta: Meta = {
@@ -29,7 +29,9 @@ export default meta;
 
 // Stories
 type Story = StoryObj<typeof Button>;
+
 const Default: Story = { args: { children: 'Label' } };
+
 export const Primary: Story = { args: { ...Default.args, variant: 'primary' } };
 export const Secondary: Story = {
   args: { ...Default.args, variant: 'secondary' },
@@ -47,54 +49,25 @@ export const IconLeft: Story = { args: { ...Default.args, icon: <Plus /> } };
 export const Buttons: Story = {
   render: (args) => (
     <div className="space-y-4">
-      <div className="flex flex-wrap gap-2 items-center">
-        <Button {...args}>Primary</Button>
-        <Button data-hover>Hover</Button>
-        <Button data-focus>focus</Button>
-        <Button data-active>Click</Button>
-        <Button isLoading>Loading</Button>
-        <Button isDisabled>Disabled</Button>
-      </div>
-      <div className="flex flex-wrap gap-2 items-center">
-        <Button variant="secondary" {...args}>
-          Secondary
-        </Button>
-        <Button variant="secondary" data-hover>
-          Hover
-        </Button>
-        <Button variant="secondary" data-focus>
-          focus
-        </Button>
-        <Button variant="secondary" data-active>
-          Click
-        </Button>
-        <Button variant="secondary" isLoading>
-          Loading
-        </Button>
-        <Button variant="secondary" isDisabled>
-          Disabled
-        </Button>
-      </div>
-      <div className="flex flex-wrap gap-2 items-center">
-        <Button variant="tertiary" {...args}>
-          Tertiary
-        </Button>
-        <Button variant="tertiary" data-hover>
-          Hover
-        </Button>
-        <Button variant="tertiary" data-focus>
-          focus
-        </Button>
-        <Button variant="tertiary" data-active>
-          Click
-        </Button>
-        <Button variant="tertiary" isLoading>
-          Loading
-        </Button>
-        <Button variant="tertiary" isDisabled>
-          Disabled
-        </Button>
-      </div>
+      <BtnGroup {...args} />
+      <BtnGroup icon={<ArrowRight />} iconPosition="Right" {...args} />
+      <BtnGroup icon={<Plus />} {...args} />
+      <BtnGroup variant={'secondary'} {...args} />
+      <BtnGroup
+        variant={'secondary'}
+        icon={<ArrowRight />}
+        iconPosition="Right"
+        {...args}
+      />
+      <BtnGroup variant={'secondary'} icon={<Plus />} {...args} />
+      <BtnGroup variant={'tertiary'} {...args} />
+      <BtnGroup
+        variant={'tertiary'}
+        icon={<ArrowRight />}
+        iconPosition="Right"
+        {...args}
+      />
+      <BtnGroup variant={'tertiary'} icon={<Plus />} {...args} />
     </div>
   ),
 };
@@ -105,3 +78,25 @@ Buttons.parameters = {
     focusVisible: ['[data-focus]'],
   },
 };
+function BtnGroup(args: ButtonProps) {
+  return (
+    <div className="flex flex-wrap gap-2 items-center">
+      <Button {...args}>Primary</Button>
+      <Button {...args} data-hover>
+        Hover
+      </Button>
+      <Button {...args} data-focus>
+        focus
+      </Button>
+      <Button {...args} data-active>
+        Click
+      </Button>
+      <Button {...args} isLoading>
+        Loading
+      </Button>
+      <Button {...args} isDisabled>
+        Disabled
+      </Button>
+    </div>
+  );
+}

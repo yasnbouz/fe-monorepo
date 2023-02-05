@@ -47,7 +47,7 @@ const button = cva(
   },
 );
 
-interface ButtonProps extends VariantProps<typeof button> {
+export interface ButtonProps extends VariantProps<typeof button> {
   /** If true, the button will show a spinner. */
   isLoading?: boolean;
   /** If true, the button will be disabled. */
