@@ -7,11 +7,11 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix \"src/**/*.+(ts|tsx)\"",
     "storybook": "run-p watch:*",
+    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css --watch",
+    "watch:storybook": "storybook dev -p 6008 --no-open",
     "build-storybook": "run-p build:*",
     "build:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css",
-    "build:storybook": "storybook build --quiet",
-    "watch:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css --watch",
-    "watch:storybook": "storybook dev -p 6008 --no-open"
+    "build:storybook": "storybook build --quiet"
   },
   "dependencies": {
     "@hu/icons": "workspace:*",

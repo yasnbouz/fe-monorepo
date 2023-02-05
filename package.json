@@ -13,8 +13,7 @@
     "typecheck": "turbo run typecheck --parallel",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json}\"",
     "storybook": "turbo run storybook --parallel",
-    "storybook:build": "turbo run storybook:build --parallel",
-    "storybook:serve": "turbo run storybook:serve --parallel"
+    "build-storybook": "turbo run build-storybook --parallel"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
