@@ -1,4 +1,4 @@
-import { Button, Icon } from '@hu/ui';
+import { Button } from '@hu/ui';
 import { Plus } from '@hu/icons';
 
 export default function Web() {
