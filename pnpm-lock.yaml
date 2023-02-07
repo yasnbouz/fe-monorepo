@@ -183,11 +183,11 @@ importers:
       prop-types: 15.8.1
       react: ^18.2.0
       react-dom: ^18.2.0
+      rollup-plugin-visualizer: 5.9.0
       storybook: 7.0.0-beta.41
       storybook-addon-designs: beta
       storybook-addon-pseudo-states: 2.0.0-next.0
       tailwind-config: workspace:*
-      tailwind-merge: 1.8.1
       tailwindcss: ^3.2.4
       tsconfig: workspace:*
       typescript: ^4.9.3
@@ -198,7 +198,6 @@ importers:
       cva: /class-variance-authority/0.4.0_typescript@4.9.4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      tailwind-merge: 1.8.1
     devDependencies:
       '@storybook/addon-essentials': 7.0.0-beta.41_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-interactions': 7.0.0-beta.41_biqbaboplfbrettd7655fr4n2y
@@ -215,6 +214,7 @@ importers:
       eslint-plugin-storybook: 0.6.10_zkdaqh7it7uc4cvz2haft7rc6u
       npm-run-all: 4.1.5
       prop-types: 15.8.1
+      rollup-plugin-visualizer: 5.9.0
       storybook: 7.0.0-beta.41
       storybook-addon-designs: 7.0.0-beta.2_v52bgtin7yma2mtvcyvw7fe4bq
       storybook-addon-pseudo-states: 2.0.0-next.0_biqbaboplfbrettd7655fr4n2y
@@ -6021,6 +6021,15 @@ packages:
       wrap-ansi: 7.0.0
     dev: true
 
+  /cliui/8.0.1:
+    resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      wrap-ansi: 7.0.0
+    dev: true
+
   /clone-deep/4.0.1:
     resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
     engines: {node: '>=6'}
@@ -11372,6 +11381,22 @@ packages:
       inherits: 2.0.4
     dev: true
 
+  /rollup-plugin-visualizer/5.9.0:
+    resolution: {integrity: sha512-bbDOv47+Bw4C/cgs0czZqfm8L82xOZssk4ayZjG40y9zbXclNk7YikrZTDao6p7+HDiGxrN0b65SgZiVm9k1Cg==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      rollup: 2.x || 3.x
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      open: 8.4.0
+      picomatch: 2.3.1
+      source-map: 0.7.4
+      yargs: 17.6.2
+    dev: true
+
   /rollup/3.11.0:
     resolution: {integrity: sha512-+uWPPkpWQ2H3Qi7sNBcRfhhHJyUNgBYhG4wKe5wuGRj2m55kpo+0p5jubKNBjQODyPe6tSBE3tNpdDwEisQvAQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
@@ -12137,10 +12162,6 @@ packages:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
     dev: true
-
-  /tailwind-merge/1.8.1:
-    resolution: {integrity: sha512-+fflfPxvHFr81hTJpQ3MIwtqgvefHZFUHFiIHpVIRXvG/nX9+gu2P7JNlFu2bfDMJ+uHhi/pUgzaYacMoXv+Ww==}
-    dev: false
 
   /tailwindcss-capsize/3.0.3_tailwindcss@3.2.4:
     resolution: {integrity: sha512-R3IgkZlso4YWxFlbrSzUWCCRLIs4qhDp5qbxNtcdI4N1siClIBD0zaj6u4KzbNTH9YtHce3Gq1teeiz/QHnnRw==}
@@ -13314,6 +13335,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /yargs-parser/21.1.1:
+    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
+    engines: {node: '>=12'}
+    dev: true
+
   /yargs/16.2.0:
     resolution: {integrity: sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==}
     engines: {node: '>=10'}
@@ -13325,6 +13351,19 @@ packages:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 20.2.9
+    dev: true
+
+  /yargs/17.6.2:
+    resolution: {integrity: sha512-1/9UrdHjDZc0eOU0HxOHoS78C69UD3JRMvzlJ7S79S2nTaWRA/whGCTV8o9e/N/1Va9YIV7Q4sOxD8VV4pCWOw==}
+    engines: {node: '>=12'}
+    dependencies:
+      cliui: 8.0.1
+      escalade: 3.1.1
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      string-width: 4.2.3
+      y18n: 5.0.8
+      yargs-parser: 21.1.1
     dev: true
 
   /yauzl/2.10.0:

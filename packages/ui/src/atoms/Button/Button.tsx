@@ -1,7 +1,8 @@
+import React from 'react';
 import { type VariantProps, cva } from 'cva';
-import type { ReactNode, MouseEvent } from 'react';
 import { Loading } from '@hu/icons';
 import { Icon } from '../Icon';
+
 const button = cva(
   'rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2',
   {
@@ -53,12 +54,12 @@ export interface ButtonProps extends VariantProps<typeof button> {
   /** If true, the button will be disabled. */
   isDisabled?: boolean;
   /** If added, the button will show an icon. */
-  icon?: ReactNode;
+  icon?: React.ReactNode;
   /** By Default is Left, let you choose where to put the icon after or before the button label. */
   iconPosition?: 'Left' | 'Right';
   /** On click event */
-  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
-  children?: ReactNode;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  children?: React.ReactNode;
 }
 
 /**

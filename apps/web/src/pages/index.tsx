@@ -5,7 +5,7 @@ export default function Web() {
   return (
     <div className="font-sans">
       <div>
-        <Button variant="primary" size="normal" icon={<Plus />}>
+        <Button variant="secondary" size="normal" icon={<Plus />}>
           dont touch me
         </Button>
       </div>

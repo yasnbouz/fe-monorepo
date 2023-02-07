@@ -1,5 +1,6 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonProps } from '.';
+import { Button, ButtonProps } from './Button';
 import { ArrowRight, Plus } from '@hu/icons';
 
 const meta: Meta = {
