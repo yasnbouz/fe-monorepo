@@ -13,12 +13,14 @@
     "typecheck": "turbo run typecheck --parallel",
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json}\"",
     "storybook": "turbo run storybook --parallel",
-    "build-storybook": "turbo run build-storybook --parallel"
+    "build-storybook": "turbo run build-storybook --parallel",
+    "clean": "rimraf packages/**/dist packages/**/.turbo apps/**/.next apps/**/.turbo"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
+    "rimraf": "3.0.2",
     "turbo": "1.6.3"
   },
   "engines": {
