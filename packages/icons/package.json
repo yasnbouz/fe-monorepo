@@ -3,18 +3,23 @@
   "version": "0.1.0",
   "description": "Transform Icons into Optimized React Component",
   "license": "ISC",
-  "main": "./dist/index.ts",
-  "types": "./dist/index.ts",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist/*"
   ],
+  "sideEffects": false,
   "scripts": {
-    "build": "rm -rf dist && svgr -d dist -- src"
+    "svgr": "rm -rf src && svgr -d src -- assets",
+    "bundle": "tsup --onSuccess \"pnpm tsc\"",
+    "build": "pnpm svgr && pnpm bundle"
   },
   "devDependencies": {
     "@svgr/cli": "6.5.1",
     "@types/react": "18.0.27",
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "tsup": "6.6.0",
+    "tsconfig": "workspace:*"
   },
   "pnpm": {
     "overrides": {

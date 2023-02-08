@@ -1,10 +1,13 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["src"],
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "declarationMap": false,
-    "emitDeclarationOnly": true,
-    "declarationDir": "dist"
+    "declarationDir": "dist/types"
   },
-  "exclude": ["**/*.stories.tsx", "**/*.test.tsx", "**/*.e2e.tsx"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx",
+    "src/**/*.e2e.tsx"
+  ]
 }
