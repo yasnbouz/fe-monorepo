@@ -6,7 +6,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "sideEffects": false,
   "scripts": {
