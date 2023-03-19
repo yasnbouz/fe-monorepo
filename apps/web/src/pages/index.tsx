@@ -6,7 +6,7 @@ export default function Web() {
     <div className="font-sans">
       <div>
         <Button variant="secondary" size="normal" icon={<Plus />}>
-          dont touch me
+          Plus
         </Button>
       </div>
       <p className="text-xl leading-6">

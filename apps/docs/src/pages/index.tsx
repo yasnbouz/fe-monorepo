@@ -1,11 +1,11 @@
 import { Button } from '@hu/ui';
-import { Welcome } from '../src/components/Welcome';
+import { Welcome } from '../components/Welcome';
 
 export default function Docs() {
   return (
     <div>
       <Welcome />
-      <Button variant="secondary" />
+      <Button variant="secondary">submit</Button>{' '}
     </div>
   );
 }
