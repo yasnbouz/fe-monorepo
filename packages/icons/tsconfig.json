@@ -2,6 +2,7 @@
   "extends": "tsconfig/react-library.json",
   "include": ["src"],
   "compilerOptions": {
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "emitDeclarationOnly": true
   }
 }
