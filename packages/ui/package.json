@@ -2,8 +2,17 @@
   "name": "@hu/ui",
   "private": true,
   "version": "0.1.0",
-  "module": "./dist/index.mjs",
   "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json":"./package.json"
+  },
   "files": [
     "dist"
   ],

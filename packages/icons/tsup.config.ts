@@ -7,7 +7,8 @@ const baseConfig: Options = {
   // will be minified at the consuming app
   minify: false,
   external: ['react'],
-  splitting: false,
+  splitting: true,
+  treeshake: true,
   outExtension() {
     return {
       js: `.js`,
