@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import { visualizer } from 'rollup-plugin-visualizer';
+import packageJson from './package.json';
 
+const externals = [
+  ...Object.keys(packageJson.peerDependencies),
+  ...Object.keys(packageJson.devDependencies),
+];
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
@@ -13,7 +18,7 @@ export default defineConfig({
     },
     minify: false,
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: externals,
       output: {
         preserveModules: true,
         preserveModulesRoot: 'src',

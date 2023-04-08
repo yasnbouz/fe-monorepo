@@ -7,6 +7,8 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
     'storybook-addon-designs',
     'storybook-addon-pseudo-states',
+    '@storybook/addon-a11y',
+    '@storybook/addon-styling',
   ],
   typescript: {
     check: false,
@@ -24,6 +26,5 @@ const config: StorybookConfig = {
     options: {},
   },
   core: { disableTelemetry: true },
-  staticDirs: ['../public'],
 };
-module.exports = config;
+export default config;

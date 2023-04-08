@@ -7,6 +7,7 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
     '../../packages/ui/src/**/*.{js,jsx,ts,tsx}',
   ],
+  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
       fontFamily: {
@@ -26,7 +27,7 @@ module.exports = {
       Primary: {
         D_Blue: '#0053ad',
         Navy: '#0663c7',
-        M_Blue: '#0671e0',
+        M_Blue: '#0565CC',
         Azure: '#4196f0',
         Sky: '#dbedff',
         L_Blue: '#eef5fc',
