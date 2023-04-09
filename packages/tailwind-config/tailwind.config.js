@@ -1,8 +1,8 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
-const interMetrics = require('@capsizecss/metrics/inter');
+import { fontFamily } from 'tailwindcss/defaultTheme';
+import interMetrics from '@capsizecss/metrics/inter';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
     '../../packages/ui/src/**/*.{js,jsx,ts,tsx}',
@@ -94,5 +94,5 @@ module.exports = {
       full: '9999px',
     },
   },
-  plugins: [require('tailwindcss-capsize')],
+  plugins: [import('tailwindcss-capsize')],
 };

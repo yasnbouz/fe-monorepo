@@ -1,4 +1,5 @@
-import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import tw from '../../tailwind.config';
 
 <Meta title="tokens/Colors" />
 
@@ -9,60 +10,8 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
 &nbsp;
 
 <ColorPalette>
-  <ColorItem
-    title="Neutral"
-    colors={{
-      Black: "#212121",
-      D_Grey: "#4d4d4d",
-      Grey: "#717171",
-      L_Grey: "#89939e",
-      "Grey-blue": "#abbed1",
-      Silver: "#f5f7fa",
-      White: "#ffffff",
-    }}
-  />
-  <ColorItem
-    title="Primary"
-    colors={{
-      D_Blue: "#0053ad",
-      Navy: "#0663c7",
-      M_Blue: "#0565CC",
-      Azure: "#4196f0",
-      Sky: "#dbedff",
-      L_Blue: "#eef5fc",
-    }}
-  />
-  <ColorItem
-    title="Success"
-    colors={{
-      D_Green: "#115b43",
-      Forest: "#1b6e53",
-      M_Green: "#009262",
-      Herbal: "#32c997",
-      Mint: "#84dfc1",
-      L_Green: "#f1fbf8",
-    }}
-  />
-  <ColorItem
-    title="Warning"
-    colors={{
-      D_Yellow: "#e48900",
-      Lemon: "#ffa826",
-      M_Yellow: "#ffb240",
-      Straw: "#ffc670",
-      Sand: "#ffd596",
-      L_Yellow: "#fff8ec",
-    }}
-  />
-  <ColorItem
-    title="Danger"
-    colors={{
-      D_Red: "#c33025",
-      Scarlet: "#e01507",
-      M_Red: "#e02b1d",
-      Raspberry: "#ff5a4f",
-      Rubicund: "#f0857d",
-      L_Red: "#fff1f0",
-    }}
-  />
+  {Object.entries(tw.theme.colors).map(([k, v]) => {
+    const _colors = typeof v === 'string' ? { [k]: v } : v;
+    return <ColorItem key={k} title={k} colors={_colors} />;
+  })}
 </ColorPalette>

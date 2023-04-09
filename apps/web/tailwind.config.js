@@ -1,3 +1,4 @@
-const tailwindConfig = require('tailwind-config');
+import tailwindConfig from 'tailwind-config';
+
 /** @type {import('tailwindcss').Config} */
-module.exports = tailwindConfig;
+export default tailwindConfig;
