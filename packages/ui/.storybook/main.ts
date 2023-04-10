@@ -1,4 +1,5 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-webpack5';
+
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -8,7 +9,7 @@ const config: StorybookConfig = {
     'storybook-addon-designs',
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
-    '@storybook/addon-styling',
+    { name: '@storybook/addon-styling', options: { postCss: true } },
   ],
   typescript: {
     check: false,
@@ -22,9 +23,16 @@ const config: StorybookConfig = {
     },
   },
   framework: {
-    name: '@storybook/react-vite',
+    name: '@storybook/react-webpack5',
     options: {},
   },
   core: { disableTelemetry: true },
+  // webpackFinal(config, options) {
+  //   config.module?.rules?.push({
+  //     test: /\.css$/,
+  //     use: ['postcss-loader'],
+  //   });
+  //   return config;
+  // },
 };
 export default config;
