@@ -47,7 +47,7 @@ export const IconRight: Story = {
   args: { ...Default.args, icon: <ArrowRight />, iconPosition: 'Right' },
 };
 export const IconLeft: Story = { args: { ...Default.args, icon: <Plus /> } };
-export const Buttons: Story = {
+export const All: Story = {
   render: (args) => (
     <div className="space-y-4">
       <BtnGroup {...args} />
@@ -72,7 +72,7 @@ export const Buttons: Story = {
     </div>
   ),
 };
-Buttons.parameters = {
+All.parameters = {
   pseudo: {
     hover: ['[data-hover]'],
     active: '[data-active]',
