@@ -4,7 +4,6 @@ const baseConfig: Options = {
   entry: ['src'],
   clean: true,
   target: 'esnext',
-  // will be minified at the consuming app
   minify: false,
   external: ['react'],
   splitting: true,

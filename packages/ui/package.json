@@ -11,6 +11,7 @@
       "import": "./dist/index.mjs",
       "default": "./dist/index.js"
     },
+    "./style.css": "./dist/style.css",
     "./package.json": "./package.json"
   },
   "files": [
@@ -23,7 +24,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix \"src/**/*.+(ts|tsx)\"",
     "storybook": "storybook dev -p 6008 --no-open",
-    "build-storybook": "storybook build --debug"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@hu/icons": "*",

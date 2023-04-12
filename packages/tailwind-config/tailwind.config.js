@@ -2,11 +2,8 @@ import { fontFamily } from 'tailwindcss/defaultTheme';
 import interMetrics from '@capsizecss/metrics/inter';
 
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    '../../packages/ui/src/**/*.{js,jsx,ts,tsx}',
-  ],
+const config = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
@@ -96,3 +93,4 @@ export default {
   },
   plugins: [import('tailwindcss-capsize')],
 };
+export default config;
