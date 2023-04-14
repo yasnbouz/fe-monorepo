@@ -1,20 +1,20 @@
 import * as React from 'react';
-import { SVGProps } from 'react';
+import type { SVGProps } from 'react';
 const SvgBurger = (props: SVGProps<SVGSVGElement>) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     focusable="false"
     {...props}
   >
     <path
-      d="M20 6H4m16 6H4m16 6H4"
       stroke="currentColor"
-      strokeWidth={1.5}
       strokeLinecap="round"
+      strokeWidth={1.5}
+      d="M20 6H4m16 6H4m16 6H4"
     />
   </svg>
 );

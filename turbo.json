@@ -13,6 +13,11 @@
       "cache": false
     },
     "dev": {
+      "dependsOn": ["@hu/icons#build", "@hu/ui#build"],
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
       "cache": false,
       "persistent": true
     },

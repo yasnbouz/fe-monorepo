@@ -1,5 +1,5 @@
-import { fontFamily } from 'tailwindcss/defaultTheme';
-import interMetrics from '@capsizecss/metrics/inter';
+import defaultTheme from 'tailwindcss/defaultTheme.js';
+import interMetrics from '@capsizecss/metrics/inter.js';
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -8,7 +8,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
     },
     colors: {

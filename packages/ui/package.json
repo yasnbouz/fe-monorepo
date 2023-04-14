@@ -19,7 +19,7 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "pnpm vite build && pnpm types",
+    "build": "yarn vite build && yarn types",
     "types": "tsc -p ./tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix \"src/**/*.+(ts|tsx)\"",

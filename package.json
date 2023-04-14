@@ -11,7 +11,7 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint --parallel",
     "typecheck": "turbo run typecheck --parallel",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json}\"",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json,astro}\"",
     "storybook": "turbo run storybook --parallel",
     "build-storybook": "turbo run build-storybook --parallel",
     "clean": "rimraf packages/**/dist packages/**/.turbo apps/**/.next apps/**/.turbo"
@@ -21,7 +21,7 @@
     "eslint-config-custom": "*",
     "prettier": "latest",
     "rimraf": "3.0.2",
-    "turbo": "1.6.3"
+    "turbo": "1.10.3"
   },
   "engines": {
     "node": ">=16.0.0"

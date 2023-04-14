@@ -20,19 +20,14 @@
   "sideEffects": false,
   "scripts": {
     "svgr": "rm -rf src && svgr -d src -- assets",
-    "bundle": "tsup --onSuccess \"pnpm tsc\"",
-    "build": "pnpm svgr && pnpm bundle"
+    "bundle": "tsup --onSuccess \"yarn tsc\"",
+    "build": "yarn svgr && yarn bundle"
   },
   "devDependencies": {
-    "@svgr/cli": "6.5.1",
-    "@types/react": "18.0.27",
+    "@svgr/cli": "8.0.1",
+    "@types/react": "18.2.12",
     "react": "18.2.0",
-    "tsup": "6.6.0",
+    "tsup": "6.7.0",
     "tsconfig": "*"
-  },
-  "pnpm": {
-    "overrides": {
-      "svgo": "3.0.2"
-    }
   }
 }
