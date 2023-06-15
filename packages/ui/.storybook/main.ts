@@ -9,7 +9,12 @@ const config: StorybookConfig = {
     'storybook-addon-designs',
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
-    '@storybook/addon-styling',
+    {
+      name: '@storybook/addon-styling',
+      options: {
+        postCss: true,
+      },
+    },
   ],
   typescript: {
     check: false,
@@ -27,12 +32,5 @@ const config: StorybookConfig = {
     options: {},
   },
   core: { disableTelemetry: true },
-  webpackFinal(config) {
-    config.module?.rules?.push({
-      test: /\.css$/,
-      use: ['postcss-loader'],
-    });
-    return config;
-  },
 };
 export default config;

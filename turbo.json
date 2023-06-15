@@ -22,11 +22,12 @@
       "persistent": true
     },
     "storybook": {
+      "dependsOn": ["@hu/icons#build"],
       "cache": false,
       "persistent": true
     },
     "build-storybook": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@hu/icons#build"],
       "outputs": ["storybook-static"]
     }
   }
