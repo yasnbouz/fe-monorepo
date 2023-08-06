@@ -29,7 +29,7 @@
   "dependencies": {
     "@hu/icons": "*",
     "clsx": "^1.2.1",
-    "cva": "npm:class-variance-authority@0.6.0"
+    "tailwind-variants": "0.1.13"
   },
   "devDependencies": {
     "@babel/preset-env": "7.22.5",

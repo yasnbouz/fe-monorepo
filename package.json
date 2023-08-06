@@ -14,7 +14,7 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json,astro}\"",
     "storybook": "turbo run storybook --parallel",
     "build-storybook": "turbo run build-storybook --parallel",
-    "clean": "rimraf packages/**/dist packages/**/.turbo apps/**/.next apps/**/.turbo"
+    "clean": "rimraf packages/**/dist packages/**/storybook-static packages/**/.turbo apps/**/.next apps/**/.turbo"
   },
   "devDependencies": {
     "cross-env": "7.0.3",

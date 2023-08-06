@@ -1,54 +1,45 @@
 import React from 'react';
-import { type VariantProps, cva } from 'cva';
+import { tv, type VariantProps } from 'tailwind-variants';
 import { Loading } from '@hu/icons';
 import { Icon } from '../Icon';
 
-const button = cva(
-  'rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2',
-  {
-    variants: {
-      /** The size of the Button */
-      size: {
-        normal: 'px-8 py-4 text-lg leading-6',
-        medium: 'px-8 py-[14px] text-base leading-5',
-        small: 'px-6 py-2 text-sm leading-4',
-      },
-      /** The variant of the Button */
-      variant: {
-        primary: [
-          'bg-Primary-M_Blue text-Neutral-White',
-          'hover:bg-Primary-Navy',
-          'focus-visible:bg-Primary-Navy focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-Neutral-Black',
-          'active:bg-Primary-D_Blue active:ring-0',
-          'data-[loading=true]:bg-Primary-D_Blue data-[loading=true]:cursor-not-allowed',
-          'disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:cursor-not-allowed',
-        ],
-        secondary: [
-          'bg-transparent text-Primary-M_Blue ring-1 ring-inset ring-Primary-M_Blue',
-          'hover:bg-Primary-L_Blue',
-          'focus-visible:bg-Primary-L_Blue focus-visible:outline-none focus-visible:ring-Neutral-Black',
-          'active:bg-Primary-L_Blue active:ring-0',
-          'data-[loading=true]:bg-Primary-L_Blue data-[loading=true]:text-Primary-M_Blue data-[loading=true]:ring-0 data-[loading=true]:cursor-not-allowed',
-          'disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:ring-0 disabled:cursor-not-allowed',
-        ],
-        tertiary: [
-          'bg-transparent text-Primary-M_Blue',
-          'hover:bg-Primary-L_Blue',
-          'focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-Neutral-Black',
-          'active:bg-Primary-Sky active:ring-0',
-          'data-[loading=true]:bg-Primary-Sky data-[loading=true]:cursor-not-allowed',
-          'disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:cursor-not-allowed',
-        ],
-      },
+const button = tv({
+  base: 'rounded-3xl select-none inline-flex items-center align-middle justify-center gap-x-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-inset focus-visible:ring-Neutral-Black  data-loading:cursor-not-allowed',
+  variants: {
+    size: {
+      normal: 'px-8 py-4 text-lg leading-6',
+      medium: 'px-8 py-[14px] text-base leading-5',
+      small: 'px-6 py-2 text-sm leading-4',
     },
-    defaultVariants: {
-      size: 'medium',
-      variant: 'primary',
+    variant: {
+      primary: [
+        'bg-Primary-M_Blue text-Neutral-White hover:bg-Primary-Navy focus-visible:bg-Primary-Navy active:bg-Primary-D_Blue active:ring-0',
+        'data-loading:bg-Primary-D_Blue',
+      ],
+      secondary: [
+        'bg-transparent text-Primary-M_Blue ring-1 ring-inset ring-Primary-M_Blue hover:bg-Primary-L_Blue focus-visible:bg-Primary-L_Blue active:bg-Primary-L_Blue active:ring-0',
+        'data-loading:bg-Primary-L_Blue data-loading:text-Primary-M_Blue data-loading:ring-0',
+      ],
+      tertiary: [
+        'bg-transparent text-Primary-M_Blue hover:bg-Primary-L_Blue active:bg-Primary-Sky active:ring-0',
+        'data-loading:bg-Primary-Sky',
+      ],
+    },
+    disabled: {
+      true: 'disabled:bg-Primary-L_Blue disabled:text-Neutral-Grey-blue disabled:cursor-not-allowed disabled:ring-0',
     },
   },
-);
+  defaultVariants: {
+    size: 'medium',
+    variant: 'primary',
+  },
+});
 
-export interface ButtonProps extends VariantProps<typeof button> {
+type ButtonVariants = VariantProps<typeof button>;
+
+export interface ButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement>,
+    ButtonVariants {
   /** If true, the button will show a spinner. */
   isLoading?: boolean;
   /** If true, the button will be disabled. */
@@ -57,8 +48,7 @@ export interface ButtonProps extends VariantProps<typeof button> {
   icon?: React.ReactNode;
   /** By Default is Left, let you choose where to put the icon after or before the button label. */
   iconPosition?: 'Left' | 'Right';
-  /** On click event */
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  /** React Children */
   children?: React.ReactNode;
 }
 
@@ -81,7 +71,7 @@ export function Button({
   return (
     <button
       type="button"
-      className={button({ size, variant })}
+      className={button({ size, variant, disabled: isDisabled })}
       disabled={isDisabled}
       data-loading={isLoading}
       tabIndex={isDisabled || isLoading ? -1 : 0}
@@ -99,3 +89,4 @@ export function Button({
     </button>
   );
 }
+export default Button;

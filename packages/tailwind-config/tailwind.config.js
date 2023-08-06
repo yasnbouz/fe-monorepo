@@ -6,6 +6,9 @@ const config = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
+    data: {
+      loading: 'loading="true"',
+    },
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

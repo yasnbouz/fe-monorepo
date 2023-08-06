@@ -31,7 +31,7 @@ export default meta;
 // Stories
 type Story = StoryObj<typeof Button>;
 
-const Default: Story = { args: { children: 'Label' } };
+const Default: Story = { args: { children: 'Button' } };
 
 export const Primary: Story = { args: { ...Default.args, variant: 'primary' } };
 export const Secondary: Story = {
@@ -50,9 +50,14 @@ export const IconLeft: Story = { args: { ...Default.args, icon: <Plus /> } };
 export const All: Story = {
   render: (args) => (
     <div className="space-y-4">
-      <BtnGroup {...args} />
-      <BtnGroup icon={<ArrowRight />} iconPosition="Right" {...args} />
-      <BtnGroup icon={<Plus />} {...args} />
+      <BtnGroup variant="primary" {...args} />
+      <BtnGroup
+        variant="primary"
+        icon={<ArrowRight />}
+        iconPosition="Right"
+        {...args}
+      />
+      <BtnGroup variant="primary" icon={<Plus />} {...args} />
       <BtnGroup variant={'secondary'} {...args} />
       <BtnGroup
         variant={'secondary'}
@@ -79,15 +84,20 @@ All.parameters = {
     focusVisible: ['[data-focus]'],
   },
 };
+const buttonVariants = {
+  primary: 'Primary',
+  secondary: 'Secondary',
+  tertiary: 'Tertiary',
+};
 function BtnGroup(args: ButtonProps) {
   return (
-    <div className="flex flex-wrap gap-2 items-center">
-      <Button {...args}>Primary</Button>
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(22px,164px))] gap-3">
+      <Button {...args}>{buttonVariants[args.variant!]}</Button>
       <Button {...args} data-hover>
         Hover
       </Button>
       <Button {...args} data-focus>
-        focus
+        Focus
       </Button>
       <Button {...args} data-active>
         Click
