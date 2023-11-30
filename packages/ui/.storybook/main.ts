@@ -1,7 +1,8 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -9,13 +10,9 @@ const config: StorybookConfig = {
     'storybook-addon-designs',
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
-    {
-      name: '@storybook/addon-styling',
-      options: {
-        postCss: true,
-      },
-    },
+    '@storybook/addon-styling',
   ],
+
   typescript: {
     check: false,
     checkOptions: {},
@@ -27,10 +24,12 @@ const config: StorybookConfig = {
       },
     },
   },
+
   framework: {
-    name: '@storybook/react-webpack5',
+    name: '@storybook/react-vite',
     options: {},
   },
+
   core: { disableTelemetry: true },
 };
 export default config;
