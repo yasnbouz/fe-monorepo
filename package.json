@@ -14,14 +14,16 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,js,tsx,json,astro}\"",
     "storybook": "turbo run storybook --parallel",
     "build-storybook": "turbo run build-storybook --parallel",
-    "clean": "rimraf packages/**/dist packages/**/storybook-static packages/**/.turbo apps/**/.next apps/**/.turbo"
+    "clean": "yarn clean:output && yarn clean:turbo",
+    "clean:output": "rimraf packages/**/dist packages/**/storybook-static apps/**/.next",
+    "clean:turbo": "rimraf packages/**/.turbo  apps/**/.turbo node_modules/.cache/turbo"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
     "eslint-config-custom": "*",
     "prettier": "latest",
     "rimraf": "3.0.2",
-    "turbo": "1.10.3"
+    "turbo": "1.10.16"
   },
   "engines": {
     "node": ">=16.0.0"
