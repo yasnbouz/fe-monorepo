@@ -1,6 +1,6 @@
 # Turborepo starter
 
-This is an official yarn starter turborepo.
+This is an official yarn starter turborepo
 
 ## What's inside?
 
